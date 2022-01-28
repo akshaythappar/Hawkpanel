@@ -7,6 +7,7 @@ import Link from 'next/link';
 import { auth } from '../firebase';
 import { onAuthStateChanged, signOut } from 'firebase/auth';
 import { useRouter } from 'next/router';
+import Footer from './Footer';
 
 
 export default function Home() {
@@ -23,7 +24,7 @@ export default function Home() {
         });
       } else {
         setUser(null);
-        router.push('/login');
+        router.push('#');
       }
     })
   }, []);
@@ -31,6 +32,7 @@ export default function Home() {
   return (
     <Wrapper>
       <Map />
+      
       <ActionItems >
         <Header>
 
@@ -73,10 +75,13 @@ export default function Home() {
         </ActionButtons>
 
         <InputButton>
-          Where to
+
         </InputButton>
 
       </ActionItems>
+      
+      {/* <Footer /> */}
+
     </Wrapper>
   )
 };

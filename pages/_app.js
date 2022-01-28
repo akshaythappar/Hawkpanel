@@ -1,4 +1,5 @@
 import '../styles/globals.css';
+import '../styles/Footer.css'
 import 'tailwindcss/tailwind.css';
 import 'mapbox-gl/dist/mapbox-gl.css';
 
