@@ -7,6 +7,16 @@ function Search() {
     const [pickup, setPickup] = useState('');
     const [dropoff, setDropoff] = useState('');
 
+    const handleConfirm = ()=>{
+        if(pickup.length==0 || dropoff.length==0){
+            alert('Please Add both Locations');
+        }
+        else if(pickup.length=== dropoff.length){
+            alert('Both Location are same');
+        }
+    }
+    
+
     
 
     return (
@@ -47,14 +57,15 @@ function Search() {
             </SavedPlaces>
 
             <Link href={{
-                pathname: '/confirm',
+                // pathname: '/confirm',
+                pathname: (pickup.length>0 && dropoff.length>0) && (pickup.length!=dropoff.length)?'/confirm' : "",
                 query: {
                     pickup: pickup,
                     dropoff: dropoff,
                 }
             }}>
                 <ConfirmContainer>
-                    <ConfirmButton>Confirm Locations</ConfirmButton>
+                    <ConfirmButton onClick={e=>handleConfirm()}>Confirm Locations</ConfirmButton>
                 </ConfirmContainer>
             </Link>
 

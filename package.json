@@ -1,11 +1,11 @@
 {
-  "name": "uber-clone",
-    "private": true,
+  "name": "hawk-aero",
+  "private": true,
   "scripts": {
     "dev": "next dev",
     "start": "next start",
     "lint": "next lint",
-    "build":"next build && next export"
+    "build": "next build && next export"
   },
   "dependencies": {
     "antd": "^4.18.5",

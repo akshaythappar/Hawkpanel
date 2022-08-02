@@ -7,7 +7,7 @@ import Link from 'next/link';
 import { auth } from '../firebase';
 import { onAuthStateChanged, signOut } from 'firebase/auth';
 import { useRouter } from 'next/router';
-import Footer from './Footer';
+// import Footer from './Footer';
 
 
 export default function Home() {
@@ -24,7 +24,7 @@ export default function Home() {
         });
       } else {
         setUser(null);
-        router.push('#');
+        router.push('/login');
       }
     })
   }, []);
@@ -80,7 +80,7 @@ export default function Home() {
 
       </ActionItems>
       
-      {/* <Footer /> */}
+      {/* <Foote/> */}
 
     </Wrapper>
   )
